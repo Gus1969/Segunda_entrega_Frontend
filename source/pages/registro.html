@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+<body>
+  
+    <nav>
+     
+        <div class="logo"> 
+         
+         <h1>HITS</h1>
+       </div>
+         <ul class="enlaces">
+           <li class="item"> <a class="toppers"  href="index.html"> Inicio</a></li>
+           <li class="item"> <a  class="toppers" href="songs.html"> Canciones</a></li>
+         </ul>
+         <ul class="register">
+           <li class="item"> <a class="toppers" href="inicio.html">Ingrese</a></li>
+           <li class="item"> <a class="toppers"  href="registro.html"> Registro</a></li>
+           <li class="item"> <a class="toppers" href="contacto.html"> Contacto</a></li>
+         </ul>
+     </nav>
+    
+
+
+    <div class="container">
+        <form>
+            <h2 >Registro</h2>
+           
+            <label for="email">Correo Electrónico</label> <span id="errormsg"></span>
+            <input type="text"  name="email" id="email" placeholder="ingrese su correo">
+            <br>
+            <label for="password">Contraseña</label>  <span id="errorpwd"></span>
+            <input type="text" name="password" id="password" placeholder="ingrese su contraseña">
+            <br>
+            <label for="password">Confirmación de contraseña</label> </label> <span id="errorpwd1"></span>
+            <input type="text"  name="confirmacion" id="confirm" placeholder="confirmación">
+            <br>
+            <label for="género"> Género musical favorito</label> </label> <span id="errorgenero"></span>
+            <select  name="género" id="género">
+            <option value=""> Seleccione</option>
+            <option value="1">Pop</option>
+            <option value="2">Rock</option>
+            <option value="3">Salsa</option>
+            <option value="4">Punk</option>
+        </select>
+        <br>
+        
+        <h2 >Edad :</h2> <span id="erroredad"></span>
+        <span id="errorjoven"></span>
+       
+       
+         
+        <div  style="margin-top: 30px;">
+            <input  type="radio" name="edades" id="edad" value="joven"  > 
+            <label for="edades">  
+              Menor de 18 años
+            </label>
+            
+          </div>
+          <div>
+            <input  type="radio" name="edades" id="edad" value="medio"> 
+            <label  for="edades">
+              Entre 18 y 50 años
+            </label>
+          </div>
+          <div>
+            <input type="radio" name="edades" id="edad" value="viejo">
+            <label  for="edades">
+              Mayor de 60 años
+            </label>
+          </div>
+          
+       
+          <br>
+          <div >
+            <label for="condiciones">
+              <input type="checkbox" name="condiciones" id="condiciones" value="acepta">
+              Acepto los términos y condiciones.
+            </label>
+          </div>
+          <span id="errorterm"></span>
+            <br>
+            
+
+            <button onclick="return enviarDatos(this.form)"  type="submit" value="continuar" >Continuar</button>
+
+        </form>
+    </div>
+    <footer class="footer">
+      <span ><p>@Derechos Reservados</p></span>
+    </footer>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
