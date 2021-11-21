@@ -1,21 +1,21 @@
-const alias = document.getElementById('name');
+
 const email = document.getElementById('mail');
-const pwd = document.getElementById('pass');
+const pwd = document.getElementById('password');
 const button = document.getElementById('submit');
 
 button.addEventListener ('click', () => {
-const nombre = alias.value
+
 const mail = email.value;
-const password = pass.value;
+const password = pwd.value;
 
 const bodyObjects = {
-    nombre,
+   
     mail,
     password
 }
 
-if(nombre && mail && password) {
-    fetch("http://localhost:1000/auth/login", {
+if(email && password) {
+    fetch("http://localhost:3000/auth/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
